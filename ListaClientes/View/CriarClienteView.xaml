@@ -4,26 +4,28 @@
              x:Class="ListaClientes.View.CriarClienteView">
     <VerticalStackLayout Padding="20">
         <!-- Logo -->
-        <Image Source="icon.png" HeightRequest="80" HorizontalOptions="Center" />
+        <Image Source="icon.png" HeightRequest="50" HorizontalOptions="Start" />
 
         <!-- Título -->
-        <!--<Label Text="Novo Cliente" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />-->
+        <Label Padding="20" Text="Novo Cliente" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
 
         <!-- Nome -->
         <Label Text="Nome" FontSize="14" />
-        <Entry x:Name="NomeEntry" Placeholder="Insira o nome" Text="{Binding Nome}" />
+        <Entry Margin="5" x:Name="NomeEntry" Placeholder="Insira o nome" Text="{Binding Nome}" />
 
         <!-- Código da Cor -->
         <Label Text="Código da cor (HEX)" FontSize="14" />
-        <Entry x:Name="CorHexEntry" Placeholder="Insira o código HEX da cor" Text="{Binding CorHex}" />
+        <Entry Margin="5" x:Name="CorHexEntry" Placeholder="Insira o código HEX da cor" Text="{Binding CorHex}" />
 
         <!-- Nome Fantasia -->
+        
         <Label Text="Nome Fantasia" FontSize="14" />
-        <Entry x:Name="NomeFantasiaEntry" Placeholder="Insira o nome fantasia" Text="{Binding NomeFantasia}" />
+        <Entry Margin="5" x:Name="NomeFantasiaEntry" Placeholder="Insira o nome fantasia" Text="{Binding NomeFantasia}" />
 
         <!-- Botão de Salvar -->
         <Button Text="SALVAR"
-                BackgroundColor="Green"
+                BackgroundColor="#36ce86"
+                Margin="10,210,0,0"
                 TextColor="White"
                 FontAttributes="Bold"
                 Command="{Binding SalvarCommand}" />

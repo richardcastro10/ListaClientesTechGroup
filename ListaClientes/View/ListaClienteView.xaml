@@ -5,7 +5,7 @@
             >
     <VerticalStackLayout>
         <!-- Logo -->
-        <Image Source="icon.png" HeightRequest="80" HorizontalOptions="Center" />
+        <Image Source="icon.png" HeightRequest="50" HorizontalOptions="Start" />
 
         <!-- SearchBar -->
         <SearchBar x:Name="SearchBar"
@@ -30,11 +30,11 @@
 
         <!-- Botão de Criar Cliente -->
         <Button Text="+" FontSize="Large"
-                BackgroundColor="Green" 
+                BackgroundColor="#36ce86" 
                 TextColor="White" 
                 Padding="20"
-                CornerRadius="30"
-                Margin="20"
+                CornerRadius="10"
+                Margin="20,450,10,10"
                 WidthRequest="60"
                 HeightRequest="60"
                 VerticalOptions="End"
