@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListaClientes.View.ListaClienteView"
+            >
+    <VerticalStackLayout>
+        <!-- Logo -->
+        <Image Source="icon.png" HeightRequest="80" HorizontalOptions="Center" />
+
+        <!-- SearchBar -->
+        <SearchBar x:Name="SearchBar"
+                   Placeholder="Pesquisar cliente"
+                   Text="{Binding PesquisaTexto}"
+                   SearchCommand="{Binding PesquisaCommand}" />
+
+        <!-- Lista de Clientes -->
+        <CollectionView ItemsSource="{Binding ClientesFiltrados}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <BoxView Color="{Binding CorHex}" WidthRequest="10" HeightRequest="40" HorizontalOptions="Start" VerticalOptions="Center" />
+                        <StackLayout Orientation="Vertical" Padding="10,0,0,0">
+                            <Label Text="{Binding Nome}" FontSize="16" FontAttributes="Bold" />
+                            <Label Text="{Binding NomeFantasia}" FontSize="14" TextColor="Gray" />
+                        </StackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Botão de Criar Cliente -->
+        <Button Text="+" FontSize="Large"
+                BackgroundColor="Green" 
+                TextColor="White" 
+                Padding="20"
+                CornerRadius="30"
+                Margin="20"
+                WidthRequest="60"
+                HeightRequest="60"
+                VerticalOptions="End"
+                HorizontalOptions="End"
+                Command="{Binding CadastrarCliente}" />
+    </VerticalStackLayout>
+</ContentPage>

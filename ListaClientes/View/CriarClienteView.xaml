@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListaClientes.View.CriarClienteView">
+    <VerticalStackLayout Padding="20">
+        <!-- Logo -->
+        <Image Source="icon.png" HeightRequest="80" HorizontalOptions="Center" />
+
+        <!-- Título -->
+        <!--<Label Text="Novo Cliente" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />-->
+
+        <!-- Nome -->
+        <Label Text="Nome" FontSize="14" />
+        <Entry x:Name="NomeEntry" Placeholder="Insira o nome" Text="{Binding Nome}" />
+
+        <!-- Código da Cor -->
+        <Label Text="Código da cor (HEX)" FontSize="14" />
+        <Entry x:Name="CorHexEntry" Placeholder="Insira o código HEX da cor" Text="{Binding CorHex}" />
+
+        <!-- Nome Fantasia -->
+        <Label Text="Nome Fantasia" FontSize="14" />
+        <Entry x:Name="NomeFantasiaEntry" Placeholder="Insira o nome fantasia" Text="{Binding NomeFantasia}" />
+
+        <!-- Botão de Salvar -->
+        <Button Text="SALVAR"
+                BackgroundColor="Green"
+                TextColor="White"
+                FontAttributes="Bold"
+                Command="{Binding SalvarCommand}" />
+    </VerticalStackLayout>
+    
+</ContentPage>
